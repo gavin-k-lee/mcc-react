@@ -78,7 +78,6 @@ function App() {
             <button type="submit">Get MCC Results</button>
          </form>
       </div>
-      <br>
       <tbody>
         <tr>
           <th>MCC Code</th>
