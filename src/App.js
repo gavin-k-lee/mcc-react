@@ -6,14 +6,14 @@ function App() {
 
   const [posts, setPosts] = useState([]);
 
-  const [query, setQuery] = useState('');
+  const [queryPhrase, setQueryPhrase] = useState('');
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
        .then((response) => response.json())
        .then((data) => {
           console.log(data);
-          setPosts(data);
+          // setPosts(data);
        })
        .catch((err) => {
           console.log(err.message);
@@ -22,7 +22,31 @@ function App() {
 
   const handleSubmit = (e) => {
       e.preventDefault();
+      predictMCC(queryPhrase);
   };  
+
+  const predictMCC = async (queryPhrase) => {
+    await fetch('https://fastapi-production-c09f.up.railway.app/predict', {
+       method: 'POST',
+       body: JSON.stringify({
+          query: queryPhrase,
+       }),
+       headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+       },
+    })
+       .then((response) => response.json())
+       .then((data) => {
+          // setPosts((posts) => [data, ...posts]);
+          // setTitle('');
+          // setBody('');
+          console.log(data);
+       })
+       .catch((err) => {
+          console.log(err.message);
+       });
+ };
+
 
   return (
     <div className="App">
@@ -45,7 +69,7 @@ function App() {
       </p>
       <div className="add-post-container">
          <form onSubmit={handleSubmit}>
-            <input type="text" className="form-control" value={query}
+            <input type="text" className="form-control" value={queryPhrase}
                onChange={(e) => setQuery(e.target.value)}
             />
             <button type="submit">Get MCC Results</button>
