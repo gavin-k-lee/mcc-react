@@ -53,7 +53,7 @@ function App() {
                   placeholder="What do you sell?"
                   onChange={(e) => setQueryPhrase(e.target.value)}
             />
-            <button class="button-70" role="button" type="submit">Get MCC Results</button>
+            <button class="button-70" role="button" type="submit">Get MCC Matches</button>
          </form>
       </div>
       <table class="content-table">
