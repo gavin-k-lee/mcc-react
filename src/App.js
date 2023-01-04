@@ -1,6 +1,7 @@
 import logo from './planet-logo.svg';
 import './App.css';
 import {useEffect, useState} from 'react';
+import Form from 'react-bootstrap/Form';
 
 function App() {
 
@@ -47,8 +48,11 @@ function App() {
       </header>
       <div className="add-results-container">
          <form onSubmit={handleSubmit}>
-            <input type="text" className="form-control" value={queryPhrase}
-               onChange={(e) => setQueryPhrase(e.target.value)}
+            <input type="text"
+                  className="form-control"
+                  value={queryPhrase}
+                  placeholder="What do you sell?"
+                  onChange={(e) => setQueryPhrase(e.target.value)}
             />
             <button class="button-70" role="button" type="submit">Get MCC Results</button>
          </form>

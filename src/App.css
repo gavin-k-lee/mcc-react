@@ -55,7 +55,7 @@
   touch-action: manipulation;
 }
 
-.input[type=text] {
+.form-control[type=text] {
   width: 10%;
   padding: 12px 20px;
   margin: 8px 0;
