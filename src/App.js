@@ -58,7 +58,7 @@ function App() {
             <input type="text" className="form-control" value={queryPhrase}
                onChange={(e) => setQueryPhrase(e.target.value)}
             />
-            <button type="submit">Get MCC Results</button>
+            <button class="button-70" role="button" type="submit">Get MCC Results</button>
          </form>
       </div>
       <tbody>
