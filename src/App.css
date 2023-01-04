@@ -54,3 +54,12 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
+.input[type=text] {
+  width: 10%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #E7E7E7;
+  border-radius: 4px;
+}
