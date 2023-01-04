@@ -69,7 +69,7 @@ function App() {
               <td>{item.mcc_code}</td>
               <td>{item.name}</td>
               <td>{item.mcc_match}</td>
-              <td>{item.mcc_description}</td>
+              <td>{item.mcc_description.length > 250 ? `${item.mcc_description.substring(0, 250)}...` : item.mcc_description}</td>
             </tr>
           ))}
         </tbody>
