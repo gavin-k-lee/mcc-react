@@ -8,19 +8,6 @@ function App() {
 
   const [queryPhrase, setQueryPhrase] = useState('');
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
-       .then((response) => response.json())
-       .then((response) => {
-          console.log(response);
-          // setData(actualData);
-          // console.log(data);
-       })
-       .catch((err) => {
-          console.log(err.message);
-       });
-  }, []);
-
   const handleSubmit = (e) => {
       e.preventDefault();
       predictMCC(queryPhrase);
@@ -50,7 +37,6 @@ function App() {
        });
  };
 
-
   return (
     <div className="App">
       <header className="App-header">
@@ -67,10 +53,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <p>
-        hello world again
-      </p>
-      <div className="add-post-container">
+      <div className="add-results-container">
          <form onSubmit={handleSubmit}>
             <input type="text" className="form-control" value={queryPhrase}
                onChange={(e) => setQueryPhrase(e.target.value)}
