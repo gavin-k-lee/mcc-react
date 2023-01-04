@@ -3,7 +3,8 @@ import './App.css';
 import {useEffect, useState} from 'react';
 
 function App() {
-
+  
+  const [posts, setPosts] = useState([]);
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
        .then((response) => response.json())
