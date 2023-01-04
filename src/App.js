@@ -18,7 +18,11 @@ function App() {
        .catch((err) => {
           console.log(err.message);
        });
- }, []);
+  }, []);
+
+  const handleSubmit = (e) => {
+      e.preventDefault();
+  };  
 
   return (
     <div className="App">
