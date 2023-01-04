@@ -56,22 +56,24 @@ function App() {
             <button class="button-70" role="button" type="submit">Get MCC Results</button>
          </form>
       </div>
-      <tbody>
-        <tr>
-          <th>MCC Code</th>
-          <th>Name</th>
-          <th>Match</th>
-          <th>Description</th>
-        </tr>
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td>{item.mcc_code}</td>
-            <td>{item.name}</td>
-            <td>{item.mcc_match}</td>
-            <td>{item.mcc_description}</td>
+      <table class="content-table">
+        <tbody>
+          <tr>
+            <th>MCC Code</th>
+            <th>Name</th>
+            <th>Match</th>
+            <th>Description</th>
           </tr>
-        ))}
-      </tbody>
+          {data.map((item, index) => (
+            <tr key={index}>
+              <td>{item.mcc_code}</td>
+              <td>{item.name}</td>
+              <td>{item.mcc_match}</td>
+              <td>{item.mcc_description}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
