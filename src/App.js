@@ -4,16 +4,17 @@ import {useEffect, useState} from 'react';
 
 function App() {
 
-  const [posts, setPosts] = useState([]);
+  const [data, setData] = useState([]);
 
   const [queryPhrase, setQueryPhrase] = useState('');
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
        .then((response) => response.json())
-       .then((data) => {
-          console.log(data);
-          // setPosts(data);
+       .then((response) => {
+          console.log(response);
+          // setData(actualData);
+          // console.log(data);
        })
        .catch((err) => {
           console.log(err.message);
@@ -36,11 +37,13 @@ function App() {
        },
     })
        .then((response) => response.json())
-       .then((data) => {
+       .then((response) => {
+          setData(response);
+          console.log(data);
           // setPosts((posts) => [data, ...posts]);
           // setTitle('');
           // setBody('');
-          console.log(data);
+          // console.log(data);
        })
        .catch((err) => {
           console.log(err.message);
@@ -75,6 +78,23 @@ function App() {
             <button type="submit">Get MCC Results</button>
          </form>
       </div>
+      <br>
+      <tbody>
+        <tr>
+          <th>MCC Code</th>
+          <th>Name</th>
+          <th>Match</th>
+          <th>Description</th>
+        </tr>
+        {data.map((item, index) => (
+          <tr key={index}>
+            <td>{item.mcc_code}</td>
+            <td>{item.name}</td>
+            <td>{item.mcc_match}</td>
+            <td>{item.mcc_description}</td>
+          </tr>
+        ))}
+      </tbody>
     </div>
   );
 }
