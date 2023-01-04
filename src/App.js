@@ -70,7 +70,7 @@ function App() {
       <div className="add-post-container">
          <form onSubmit={handleSubmit}>
             <input type="text" className="form-control" value={queryPhrase}
-               onChange={(e) => setQuery(e.target.value)}
+               onChange={(e) => setQueryPhrase(e.target.value)}
             />
             <button type="submit">Get MCC Results</button>
          </form>
