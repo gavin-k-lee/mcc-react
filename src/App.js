@@ -3,8 +3,11 @@ import './App.css';
 import {useEffect, useState} from 'react';
 
 function App() {
-  
+
   const [posts, setPosts] = useState([]);
+
+  const [query, setQuery] = useState('');
+
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
        .then((response) => response.json())
@@ -36,6 +39,14 @@ function App() {
       <p>
         hello world again
       </p>
+      <div className="add-post-container">
+         <form onSubmit={handleSubmit}>
+            <input type="text" className="form-control" value={query}
+               onChange={(e) => setQuery(e.target.value)}
+            />
+            <button type="submit">Get MCC Results</button>
+         </form>
+      </div>
     </div>
   );
 }
