@@ -57,10 +57,10 @@ function App() {
             Merchant category codes (MCCs) are four-digit numbers that describe a merchant's primary business activities.
           </li>
           <li>
-            This application uses MCC descriptions from <a href='https://www.mastercard.us/content/dam/mccom/en-us/documents/rules/quick-reference-booklet-merchant-edition.pdf'>Mastercard (2018)</a> and <a href='https://pypi.org/project/sentence-transformers/'>natural language models</a> (machine learning) to find the best match of your query to an MCC. 
+            This application uses MCC descriptions from <a href='https://www.mastercard.us/content/dam/mccom/en-us/documents/rules/quick-reference-booklet-merchant-edition.pdf' target="_blank">Mastercard (2018)</a> and <a href='https://pypi.org/project/sentence-transformers/' target="_blank">natural language models</a> (machine learning) to find the best match of your query to an MCC. 
           </li>
           <li>
-            Source code: <a href='https://github.com/gavin-k-lee/mcc-react'>front-end</a> and <a href='https://github.com/gavin-k-lee/mcc-api'>back-end</a>.
+            Source code: <a href='https://github.com/gavin-k-lee/mcc-react' target="_blank">front-end</a> and <a href='https://github.com/gavin-k-lee/mcc-api' target="_blank">back-end</a>.
           </li>
         </ul>
         <br></br>
