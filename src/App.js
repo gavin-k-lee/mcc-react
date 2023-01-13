@@ -1,8 +1,11 @@
 import logo from './planet-logo.svg';
 import './App.css';
 import {useEffect, useState} from 'react';
+import { inject } from '@vercel/analytics';
 
 function App() {
+  
+  inject();
 
   const [data, setData] = useState([]);
 
