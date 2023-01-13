@@ -45,7 +45,7 @@ function App() {
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <h1>
-          MCC App
+          MCC Finder
         </h1>
       </header>
       <div className="add-results-container">
@@ -60,7 +60,7 @@ function App() {
             This application uses MCC descriptions from <a href='https://www.mastercard.us/content/dam/mccom/en-us/documents/rules/quick-reference-booklet-merchant-edition.pdf' target="_blank">Mastercard (2018)</a> and <a href='https://pypi.org/project/sentence-transformers/' target="_blank">natural language models</a> (machine learning) to find the best match of your query to an MCC. 
           </li>
           <li>
-            Source code: <a href='https://github.com/gavin-k-lee/mcc-react' target="_blank">front-end</a> and <a href='https://github.com/gavin-k-lee/mcc-api' target="_blank">back-end</a>.
+            This is an open source project and you can access it here: <a href='https://github.com/gavin-k-lee/mcc-react' target="_blank">front-end</a> and <a href='https://github.com/gavin-k-lee/mcc-api' target="_blank">back-end</a>.
           </li>
         </ul>
         <br></br>
