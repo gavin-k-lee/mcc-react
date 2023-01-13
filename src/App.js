@@ -1,4 +1,4 @@
-import logo from './planet-logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from 'react';
 import { inject } from '@vercel/analytics';
@@ -43,17 +43,32 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          MCC Finder
-        </p>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <h1>
+          MCC App
+        </h1>
       </header>
       <div className="add-results-container">
+        <h2>
+          About
+        </h2>
+        <ul>
+          <li>
+            Merchant category codes (MCCs) are four-digit numbers that describe a merchant's primary business activities.
+          </li>
+          <li>
+            This application uses MCC descriptions from <a href='https://www.mastercard.us/content/dam/mccom/en-us/documents/rules/quick-reference-booklet-merchant-edition.pdf'>Mastercard (2018)</a> and <a href='https://pypi.org/project/sentence-transformers/'>natural language models</a> (machine learning) to find the best match of your query to an MCC. 
+          </li>
+          <li>
+            Source code: <a href='https://github.com/gavin-k-lee/mcc-react'>front-end</a> and <a href='https://github.com/gavin-k-lee/mcc-api'>back-end</a>.
+          </li>
+        </ul>
+        <br></br>
          <form onSubmit={handleSubmit}>
             <input type="text"
                   className="form-control"
                   value={queryPhrase}
-                  placeholder="What do you sell?"
+                  placeholder="Enter a search phrase"
                   onChange={(e) => setQueryPhrase(e.target.value)}
             />
             <button class="button-70" role="button" type="submit">Get MCC Matches</button>
